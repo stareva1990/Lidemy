@@ -128,7 +128,7 @@ console.log(position('abce'))
 */
 function findSmallCount(arr, n) {
     count = 0
-    for(var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if(arr[i] < n) {
             count++
         }
@@ -144,7 +144,7 @@ console.log(findSmallCount([1, 2, 3], 2))
 */
 function findSmallerTotal(arr, n) {
     sum = 0
-    for(var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if(arr[i] < n) {
             sum += arr[i]
         }
@@ -160,7 +160,7 @@ console.log(findSmallerTotal([3, 2, 5, 8, 7], 999))
 */
 function findAllSmall(arr, n) {
     newArr = []
-    for(var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         if(arr[i] < n) {
             newArr.push(arr[i])
         }
@@ -176,7 +176,7 @@ console.log(findAllSmall([1, 3, 5, 4, 2], 4))
 */
 function sum(arr) {
     sum = 0
-    for(var i = 0; i < arr.length; i++) {
+    for (var i = 0; i < arr.length; i++) {
         sum += arr[i]
     }
     return sum
@@ -206,7 +206,7 @@ stars(5)
 //參數是否要設不一樣的？
 function stars(n) {
     var ans = ''
-    for(var i = 1; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         ans += '*'
     }
     return ans
@@ -226,7 +226,7 @@ function makeStars(n) {
 //other solution
 function stars(n) {
     var ans = ''
-    for(var i = 1; i <= n; i++) {
+    for (var i = 1; i <= n; i++) {
         ans += '*'
     }
     return ans
@@ -246,7 +246,7 @@ console.log(makeStars(4))
 */
 function stars(i) {
     var ans = ''
-    for(j = 1; j <= i; j++) {
+    for (j = 1; j <= i; j++) {
         ans += '*'
     }
     return ans
@@ -268,7 +268,7 @@ stars2(8)
 請寫一個函式 table，接收一個數字 n，印出 n*1 ~ n*9 的結果。
 */
 function table(n) {
-    for(i = 1; i <= 9; i++) {
+    for (i = 1; i <= 9; i++) {
         console.log(n + '*' + i + '=' + n*i)
     }
 }
@@ -280,11 +280,11 @@ table(8)
 請寫出一個 function table9to9，並列出 1*1 ~ 9*9
 */
 function table9to9() {
-    for(n = 1; n<=9; n++) {
+    for (n = 1; n<=9; n++) {
         for(i = 1; i <= 9; i++) {
             console.log(n + '*' + i + '=' + n*i)
         }
-        if(n !== 9) {
+        if (n !== 9) {
             console.log('\n')
         }
     }
@@ -317,11 +317,11 @@ function fib(n) {
 
 //better solution 2 (best)
 function fib(n) {
-    var fib = [0, 1]
+    var ans = [0, 1]
     for (var i = 2; i <= n; i++) {
-        fib[i] = fib[i-1] + fib[i-2]
+        ans[i] = ans[i-1] + ans[i-2]
     }
-    return fib[n]
+    return ans[n]
 }
 
 console.log(fib(8))
